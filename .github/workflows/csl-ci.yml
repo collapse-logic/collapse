@@ -1,0 +1,28 @@
+name: CSL CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps (if any)
+        run: |
+          python -m pip install --upgrade pip
+      - name: Pack CSL artifact
+        run: |
+          python CSL-PyKernel/csl_any_collapse.py mathematical_proof_system.py --pack
+      - name: Run proof system
+        run: |
+          python -u mathematical_proof_system.py
+      - name: Upload .cslx
+        uses: actions/upload-artifact@v4
+        with:
+          name: cslx
+          path: mathematical_proof_system.py.cslx
