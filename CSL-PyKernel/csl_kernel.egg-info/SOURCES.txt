@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+csl_kernel/__init__.py
+csl_kernel/asc7.py
+csl_kernel/asm.py
+csl_kernel/cli.py
+csl_kernel/compiler.py
+csl_kernel/fardbits.py
+csl_kernel/ir.py
+csl_kernel/parser.py
+csl_kernel.egg-info/PKG-INFO
+csl_kernel.egg-info/SOURCES.txt
+csl_kernel.egg-info/dependency_links.txt
+csl_kernel.egg-info/entry_points.txt
+csl_kernel.egg-info/requires.txt
+csl_kernel.egg-info/top_level.txt

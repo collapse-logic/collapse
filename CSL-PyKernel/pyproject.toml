@@ -1,0 +1,17 @@
+[project]
+name = "csl-kernel"
+version = "0.1.0"
+description = "Collapse Symbolic Language (CSL) kernel: ASC7 + FardBits + Collapse Code (Z-IR)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+preview = ["numpy>=1.24"]
+
+[project.scripts]
+csl = "csl_kernel.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,32 @@
+# CSL Kernel (native Python)
+
+**What it is:** a tiny, importable Python kernel for your CSL flow.
+- Canonicalize source (ASC7)
+- Compile validators to bitsets (FardBits)
+- Emit Collapse Code (Z-IR) as compact **shortened operational code**
+- Optional `--preview` uses NumPy (install extra: `pip install .[preview]`)
+
+## Quickstart (CLI)
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install .            # core only (no NumPy)
+# or: pip install .[preview]  # adds NumPy for --preview
+
+csl mini.csl             # prints assembly + hex bytecode
+csl mini.csl --preview   # prints a metrics line (needs NumPy)
+```
+
+## Python API
+
+```python
+from csl_kernel import canonicalize, parse_minimal, compile_to_ir, to_assembly, to_bytes
+
+source = open("mini.csl","r", encoding="utf-8").read()
+canon  = canonicalize(source)
+prog   = parse_minimal(canon)
+bc     = compile_to_ir(prog)
+print(to_assembly(bc))
+print(to_bytes(bc))
+```
