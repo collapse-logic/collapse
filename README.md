@@ -71,3 +71,4 @@ A valid proof satisfies:
 where entropy strictly decreases under Φ.  
 This is the mathematical guarantee of **Collapse Logic Integrity**.
 
+Thu Oct 16 14:51:10 CEST 2025
