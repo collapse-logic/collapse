@@ -1,0 +1,25 @@
+# CSL-Core
+
+The **Collapse System Logic (CSL)** core repository.  
+This repo contains the operational Python kernel, certified `.csl` logic modules, and the proof system scaffolding used for CSL compression/expansion.
+
+## Core Directories
+- `CSL-PyKernel/` — Python kernel and proof driver.
+- `.csl` files — minimal logic primitives (e.g., `mini_or.csl`, `mini_neq.csl`).
+- `mathematical_proof_system.py` — primary proof orchestrator.
+
+## Usage
+cat > README.md <<'MD'
+# CSL-Core
+
+The **Collapse System Logic (CSL)** core repository.  
+This repo contains the operational Python kernel, certified `.csl` logic modules, and the proof system scaffolding used for CSL compression/expansion.
+
+## Core Directories
+- `CSL-PyKernel/` — Python kernel and proof driver.
+- `.csl` files — minimal logic primitives (e.g., `mini_or.csl`, `mini_neq.csl`).
+- `mathematical_proof_system.py` — primary proof orchestrator.
+
+## Usage
+To compile, pack, unpack, and execute the proof system:
+cat README.md
